@@ -27,10 +27,33 @@
 // }
 
 //Challenge 2/5
+// alert('Seja bem vindo ao nosso site!')
+// let userNumber = prompt('Digite um número qualquer')
+// if(userNumber < 0) {
+//   alert(`O número digitado ${userNumber} é negativo`)
+// } else {
+//   alert(`O número digitado ${userNumber} é positivo`)
+// }
+
+//Challenge 3/5
+// alert('Seja bem vindo ao nosso site!')
+// let userPontuation = prompt("Por favor digite sua pontuação final")
+// if(userPontuation >= 100){
+//   alert('Parabens, voce venceu!!!')
+// } else {
+//   alert('Tente novamente para ganhar')
+// }
+
+//Challenge 4/5
 alert('Seja bem vindo ao nosso site!')
-let userNumber = prompt('Digite um número qualquer')
-if(userNumber < 0) {
-  alert(`O número digitado ${userNumber} é negativo`)
-} else {
-  alert(`O número digitado ${userNumber} é positivo`)
-}
+let name = 'Leonardo'
+let idade = 22
+let senha = prompt('Digite sua senha')
+let saldoDaConta = 3480
+
+if(senha == 'Jade5758'){
+  alert(`Bem vindo ${name}`)
+  alert(`Seu saldo bancário é ${saldoDaConta}`)  
+  } else {
+    alert('Senha incorreta, tente novamente')
+  }
