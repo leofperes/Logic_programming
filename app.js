@@ -1,3 +1,55 @@
+// alert('Boas vindas ao jogo do número secreto')
+// let numeroSecreto = 5;
+// let chute;
+// let tentativas = 1; 
+
+// while (chute != numeroSecreto){
+//   chute = prompt('Escolha um numero entre 0 e 10')
+
+//   if(chute == numeroSecreto){
+//     alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas`)
+//   } else {
+//     if(chute > numeroSecreto){
+//       alert(`O núemro secreto é menor que ${chute}`)
+//     } else {
+//       alert(`O núemro secreto é maior que ${chute}`)
+//     }
+//     tentativas++;
+//   }
+// }
+
+//Decrementação
+// let qtdNumeros = prompt('Digite a quantidade de números para o cálculo da média:');
+// let soma = 0;
+// let contador = qtdNumeros;
+
+// while(contador > 0){
+//     let numero = parseInt(prompt('Digite o numero:'));
+//     soma += numero;
+//     contador--;
+// }
+
+// let media = soma / qtdNumeros;
+
+// console.log(media);
+
+//Mudando valor de variável inicializado
+// let qtdNumeros = prompt('Digite a quantidade de números para o cálculo da média:');
+// let soma = 0;
+// let contador = 0;
+
+// while(contador < qtdNumeros){
+//     let numero = parseInt(prompt('Digite o numero:'));
+//     soma += numero;
+//     contador++;
+// }
+
+// let media = soma / qtdNumeros;
+
+// console.log(media);
+
+
+
 // alert('Seja bem vindo ao nosso site!.');
 // let name = 'Lua';
 // let idade = 25;
@@ -45,15 +97,47 @@
 // }
 
 //Challenge 4/5
-alert('Seja bem vindo ao nosso site!')
-let name = 'Leonardo'
-let idade = 22
-let senha = prompt('Digite sua senha')
-let saldoDaConta = 3480
+// alert('Seja bem vindo ao nosso site!')
+// let name = 'Leonardo'
+// let idade = 22
+// let senha = prompt('Digite sua senha')
+// let saldoDaConta = 3480
 
-if(senha == 'Jade5758'){
-  alert(`Bem vindo ${name}`)
-  alert(`Seu saldo bancário é ${saldoDaConta}`)  
-  } else {
-    alert('Senha incorreta, tente novamente')
-  }
+// if(senha == 'Jade5758'){
+//   alert(`Bem vindo ${name}`)
+//   alert(`Seu saldo bancário é ${saldoDaConta}`)  
+//   } else {
+//     alert('Senha incorreta, tente novamente')
+//   }
+
+//-----------------------------------------//
+//-----Challenge Looping-----//
+
+// alert('Bem vindo ao contador')
+// let contador = 1;
+// while(contador < 11){
+//   alert(`${contador}`)
+//   contador++;
+// }
+
+// alert('Bem vindo ao contador')
+// let contador = 10;
+// while(contador > 0){
+//   alert(`${contador}`)
+//   contador--;
+// }
+
+// alert('Bem vindo ao contador') 
+// let contador = prompt('Escolha um numero para para ser o contador')
+// while(contador >= 0){
+//   console.log(contador)
+//   contador--;
+// }
+
+alert('Bem vindo ao contador') 
+let qtdNumeros = prompt('Digite a quantidade de números para o cálculo da média:');
+let contador = 0;
+while(contador <= qtdNumeros){
+  console.log(contador)
+  contador++;
+}
