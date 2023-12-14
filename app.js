@@ -1,23 +1,24 @@
-// alert('Boas vindas ao jogo do número secreto')
-// let numeroSecreto = parseInt(Math.random() * 10);
-// let chute;
-// let tentativas = 1; 
-// console.log(numeroSecreto)
+alert('Boas vindas ao jogo do número secreto')
+let choosePeriod = prompt('Escolha dois números para criar um periodo e gerar um numero aleatorio entre eles para você adivinhar')
+let numeroSecreto = parseInt(Math.random() * choosePeriod + 1);
+let chute;
+let tentativas = 1; 
+console.log(numeroSecreto)
 
-// while (chute != numeroSecreto){
-//   chute = prompt('Escolha um numero entre 0 e 10')
+while (chute != numeroSecreto){
+  chute = prompt(`Escolha um numero entre 0 e ${choosePeriod}`)
 
-//   if(chute == numeroSecreto){
-//     break;
-//   } else {
-//     if(chute > numeroSecreto){
-//       alert(`O núemro secreto é menor que ${chute}`)
-//     } else {
-//       alert(`O núemro secreto é maior que ${chute}`)
-//     }
-//     tentativas++;
-//   }
-// }
+  if(chute == numeroSecreto){
+    break;
+  } else {
+    if(chute > numeroSecreto){
+      alert(`O núemro secreto é menor que ${chute}`)
+    } else {
+      alert(`O núemro secreto é maior que ${chute}`)
+    }
+    tentativas++;
+  }
+}
 
 // let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa'
 // alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}`)
