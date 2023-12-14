@@ -1,26 +1,26 @@
-alert('Boas vindas ao jogo do número secreto')
-let numeroSecreto = parseInt(Math.random() * 10);
-let chute;
-let tentativas = 1; 
-console.log(numeroSecreto)
+// alert('Boas vindas ao jogo do número secreto')
+// let numeroSecreto = parseInt(Math.random() * 10);
+// let chute;
+// let tentativas = 1; 
+// console.log(numeroSecreto)
 
-while (chute != numeroSecreto){
-  chute = prompt('Escolha um numero entre 0 e 10')
+// while (chute != numeroSecreto){
+//   chute = prompt('Escolha um numero entre 0 e 10')
 
-  if(chute == numeroSecreto){
-    break;
-  } else {
-    if(chute > numeroSecreto){
-      alert(`O núemro secreto é menor que ${chute}`)
-    } else {
-      alert(`O núemro secreto é maior que ${chute}`)
-    }
-    tentativas++;
-  }
-}
+//   if(chute == numeroSecreto){
+//     break;
+//   } else {
+//     if(chute > numeroSecreto){
+//       alert(`O núemro secreto é menor que ${chute}`)
+//     } else {
+//       alert(`O núemro secreto é maior que ${chute}`)
+//     }
+//     tentativas++;
+//   }
+// }
 
-let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa'
-alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}`)
+// let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa'
+// alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}`)
 
 //Decrementação
 // let qtdNumeros = prompt('Digite a quantidade de números para o cálculo da média:');
@@ -145,3 +145,75 @@ alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentati
 //   console.log(contador)
 //   contador++;
 // }
+
+
+//--------- FINAL CHALLENGES----------//
+//#1
+// console.log('Seja bem vindo')
+
+//#2
+// let nome = 'Leonardo'
+// console.log(`Olá, ${nome}`)
+
+//#3
+// let nome = 'Leonardo'
+// alert(`Olá, ${nome}`)
+
+//#4
+// let programmingLanguage = prompt('Qual a linguagem de programação que você mais gosta?')
+// console.log(`É a linguagem ${programmingLanguage}`)
+
+//#5
+// let valor1 = 5;
+// let valor2 = 10;
+// let resultado = valor1 + valor2
+// console.log(`A soma de ${valor1} e ${valor2} é de ${resultado}`)
+
+//#6
+// let valor1 = 9;
+// let valor2 = 4;
+// let resultado = valor1 - valor2
+// console.log(`A diferença de ${valor1} e ${valor2} é de ${resultado}`)
+
+//#7 
+// let idade = prompt ('Digite sua idade')
+// if(idade >= 18) {
+//   alert('Ok, você pode tirar a habilitação')
+// }
+
+//#8
+// let numero = prompt ('Digite um número')
+// if(numero > 0){
+//   alert(`O número ${numero} é positivo`)
+// } else if(numero < 0){
+//   alert(`O número ${numero} é negativo`)
+// } else {
+//   alert(`O número é ${numero}`)
+// }
+
+//#9
+// let contador = 1;
+// while(contador <= 10){
+//   console.log(contador)
+//   contador++;
+// }
+
+//#10
+// let nota = prompt('Digite a nota do aluno')
+// if(nota >= 7){
+//   alert('Aprovado')
+// } else {
+//   alert('Reprovado')
+// }
+
+//#11
+// let randomNumber = parseInt(Math.random() * 5 + 1)
+// console.log(randomNumber)
+
+//#12
+// let randomNumber = parseInt(Math.random() * 10 + 1)
+// console.log(randomNumber)
+
+//#13
+// let randomNumber = parseInt(Math.random() * 100 + 1)
+// console.log(randomNumber)
