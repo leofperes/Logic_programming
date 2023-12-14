@@ -1,22 +1,26 @@
-// alert('Boas vindas ao jogo do número secreto')
-// let numeroSecreto = 5;
-// let chute;
-// let tentativas = 1; 
+alert('Boas vindas ao jogo do número secreto')
+let numeroSecreto = parseInt(Math.random() * 10);
+let chute;
+let tentativas = 1; 
+console.log(numeroSecreto)
 
-// while (chute != numeroSecreto){
-//   chute = prompt('Escolha um numero entre 0 e 10')
+while (chute != numeroSecreto){
+  chute = prompt('Escolha um numero entre 0 e 10')
 
-//   if(chute == numeroSecreto){
-//     alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} tentativas`)
-//   } else {
-//     if(chute > numeroSecreto){
-//       alert(`O núemro secreto é menor que ${chute}`)
-//     } else {
-//       alert(`O núemro secreto é maior que ${chute}`)
-//     }
-//     tentativas++;
-//   }
-// }
+  if(chute == numeroSecreto){
+    break;
+  } else {
+    if(chute > numeroSecreto){
+      alert(`O núemro secreto é menor que ${chute}`)
+    } else {
+      alert(`O núemro secreto é maior que ${chute}`)
+    }
+    tentativas++;
+  }
+}
+
+let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa'
+alert(`Isso ai! Você descobriu o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}`)
 
 //Decrementação
 // let qtdNumeros = prompt('Digite a quantidade de números para o cálculo da média:');
@@ -134,10 +138,10 @@
 //   contador--;
 // }
 
-alert('Bem vindo ao contador') 
-let qtdNumeros = prompt('Digite a quantidade de números para o cálculo da média:');
-let contador = 0;
-while(contador <= qtdNumeros){
-  console.log(contador)
-  contador++;
-}
+// alert('Bem vindo ao contador') 
+// let qtdNumeros = prompt('Digite a quantidade de números para o cálculo da média:');
+// let contador = 0;
+// while(contador <= qtdNumeros){
+//   console.log(contador)
+//   contador++;
+// }
