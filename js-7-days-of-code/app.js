@@ -1,3 +1,5 @@
+
+//---------- DAY 1 ----------//
 // let numeroUm = 1
 // let stringUm = '1'
 // let numeroTrinta = 30
@@ -23,15 +25,16 @@
 //   console.log('As variáveis numeroDez e stringDez não tem o mesmo valor')
 // }
 
-let nome = prompt('Qual o seu nome?');
-let age = prompt('Quantos anos você tem?')
-let programmingLanguage = prompt('Qual linguagem de programação você está estudando?')
+//---------- DAY 2 ----------//
+// let nome = prompt('Qual o seu nome?');
+// let age = prompt('Quantos anos você tem?')
+// let programmingLanguage = prompt('Qual linguagem de programação você está estudando?')
 
-alert(`Olá ${nome}, você tem ${age} e já está aprendendo ${programmingLanguage}!`)
+// alert(`Olá ${nome}, você tem ${age} e já está aprendendo ${programmingLanguage}!`)
 
-let continueLearning = prompt(`Você gosta de estudar ${programmingLanguage}? Responda com 1 para SIM ou 2 para NÃO`)
+// let continueLearning = prompt(`Você gosta de estudar ${programmingLanguage}? Responda com 1 para SIM ou 2 para NÃO`)
 
-let userChoice = continueLearning == 1 ? alert('Muito bom! Continue estudando e você terá muito sucesso') : alert('Ahh que pena... Já tentou aprender outras linguagens?');
+// let userChoice = continueLearning == 1 ? alert('Muito bom! Continue estudando e você terá muito sucesso') : alert('Ahh que pena... Já tentou aprender outras linguagens?');
 
 // switch (continueLearning) {
 //   case 1:
@@ -42,3 +45,29 @@ let userChoice = continueLearning == 1 ? alert('Muito bom! Continue estudando e 
 //     alert('Ahh que pena... Já tentou aprender outras linguagens?')
 //     break;
 // }
+
+
+//---------- DAY 3 ----------//
+var chooseRoadmap = prompt('Você deseja seguir para o Front-end ou para o Back-End?')
+var arrayLanguages = [];
+
+function choosePath(array) {
+  prompt('Digite 1 para seguir se especializando na área escolhida ou digite 2 para seguir se desenvolvendo para se tornar fullstack?')
+  
+  var userChoicesLanguages = prompt('Deseja aprender alguma linguaguem?')
+    while (userChoicesLanguages.toLowerCase() == 'sim') {
+      var language = prompt('Digite qual deseja aprender')
+      array.push(language);
+      userChoicesLanguages = prompt('Deseja aprender mais alguma linguaguem?')
+    }
+  }
+
+if(chooseRoadmap == 'front-end'){
+  let frontEndLanguage = prompt('Deseja aprender React ou Vue?')
+  choosePath(arrayLanguages)
+  alert(`As linguagens que deseja aprender é: ${frontEndLanguage}, ${arrayLanguages}`)
+} else if(chooseRoadmap == 'back-end'){
+  let backEndLanguage = prompt('Deseja aprender C# ou Java?')
+  choosePath(arrayLanguages)
+  alert(`As linguagens que deseja aprender é: ${backEndLanguage}, ${arrayLanguages}`)
+}
