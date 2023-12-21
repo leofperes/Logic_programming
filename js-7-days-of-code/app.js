@@ -48,26 +48,49 @@
 
 
 //---------- DAY 3 ----------//
-var chooseRoadmap = prompt('Você deseja seguir para o Front-end ou para o Back-End?')
-var arrayLanguages = [];
+// var chooseRoadmap = prompt('Você deseja seguir para o Front-end ou para o Back-End?')
+// var arrayLanguages = [];
 
-function choosePath(array) {
-  prompt('Digite 1 para seguir se especializando na área escolhida ou digite 2 para seguir se desenvolvendo para se tornar fullstack?')
+// function choosePath(array) {
+//   prompt('Digite 1 para seguir se especializando na área escolhida ou digite 2 para seguir se desenvolvendo para se tornar fullstack?')
   
-  var userChoicesLanguages = prompt('Deseja aprender alguma linguaguem?')
-    while (userChoicesLanguages.toLowerCase() == 'sim') {
-      var language = prompt('Digite qual deseja aprender')
-      array.push(language);
-      userChoicesLanguages = prompt('Deseja aprender mais alguma linguaguem?')
-    }
-  }
+//   var userChoicesLanguages = prompt('Deseja aprender alguma linguaguem?')
+//     while (userChoicesLanguages.toLowerCase() == 'sim') {
+//       var language = prompt('Digite qual deseja aprender')
+//       array.push(language);
+//       userChoicesLanguages = prompt('Deseja aprender mais alguma linguaguem?')
+//     }
+//   }
 
-if(chooseRoadmap == 'front-end'){
-  let frontEndLanguage = prompt('Deseja aprender React ou Vue?')
-  choosePath(arrayLanguages)
-  alert(`As linguagens que deseja aprender é: ${frontEndLanguage}, ${arrayLanguages}`)
-} else if(chooseRoadmap == 'back-end'){
-  let backEndLanguage = prompt('Deseja aprender C# ou Java?')
-  choosePath(arrayLanguages)
-  alert(`As linguagens que deseja aprender é: ${backEndLanguage}, ${arrayLanguages}`)
+// if(chooseRoadmap == 'front-end'){
+//   let frontEndLanguage = prompt('Deseja aprender React ou Vue?')
+//   choosePath(arrayLanguages)
+//   alert(`As linguagens que deseja aprender é: ${frontEndLanguage}, ${arrayLanguages}`)
+// } else if(chooseRoadmap == 'back-end'){
+//   let backEndLanguage = prompt('Deseja aprender C# ou Java?')
+//   choosePath(arrayLanguages)
+//   alert(`As linguagens que deseja aprender é: ${backEndLanguage}, ${arrayLanguages}`)
+// }
+
+
+//---------- DAY 4 ----------//
+function gerarNumeroAleatorio() {
+  return parseInt(Math.random() * 10 + 1);
 }
+
+let randomNumber = gerarNumeroAleatorio()
+let userAttempt = 3
+
+for (let i = userAttempt; i > 0; i--) {
+  let userChoice = prompt('Tente adivinhar o número sorteado entre 1 e 10')
+  if (userChoice > randomNumber) {
+    alert(`O número escolhido é maior que o sorteado, você tem ${i - 1} tentativas`)
+  } else if(userChoice < randomNumber){
+    alert(`O número escolhido é menor que o sorteado, você tem ${i - 1} tentativas`)
+  } else {
+    alert(`Parabéns, você acertou!! Restando ${i} tentativas`)
+    break;
+  }
+}
+alert('Game over! Suas tentativas acabaram.')
+
