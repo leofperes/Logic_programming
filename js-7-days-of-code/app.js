@@ -74,23 +74,69 @@
 
 
 //---------- DAY 4 ----------//
-function gerarNumeroAleatorio() {
-  return parseInt(Math.random() * 10 + 1);
+// function gerarNumeroAleatorio() {
+//   return parseInt(Math.random() * 10 + 1);
+// }
+
+// let randomNumber = gerarNumeroAleatorio()
+// let userAttempt = 3
+
+// for (let i = userAttempt; i > 0; i--) {
+//   let userChoice = prompt('Tente adivinhar o número sorteado entre 1 e 10')
+//   if (userChoice > randomNumber) {
+//     alert(`O número escolhido é maior que o sorteado, você tem ${i - 1} tentativas`)
+//   } else if(userChoice < randomNumber){
+//     alert(`O número escolhido é menor que o sorteado, você tem ${i - 1} tentativas`)
+//   } else {
+//     alert(`Parabéns, você acertou!! Restando ${i} tentativas`)
+//     break;
+//   }
+// }
+// alert('Game over! Suas tentativas acabaram.')
+
+//---------- DAY 5 ----------//
+
+var wishlist = [{
+  Frutas: [],
+  Laticinios: [],
+  Carne: [],
+  Vegetais: []
+}]
+
+var userDecision = ""
+
+function handleWishlist(){
+  userDecision = prompt('Deseja adicionar algo na lista de compras?')
+  return userDecision;
 }
+handleWishlist();
 
-let randomNumber = gerarNumeroAleatorio()
-let userAttempt = 3
+while (userDecision == 'sim') {
+  let userProducts = prompt('Qual alimento deseja inserir na lista?')
+  let category = prompt('Em qual categoria se enquadra? Frutas/Laticinios/Carne/Vegetais')
 
-for (let i = userAttempt; i > 0; i--) {
-  let userChoice = prompt('Tente adivinhar o número sorteado entre 1 e 10')
-  if (userChoice > randomNumber) {
-    alert(`O número escolhido é maior que o sorteado, você tem ${i - 1} tentativas`)
-  } else if(userChoice < randomNumber){
-    alert(`O número escolhido é menor que o sorteado, você tem ${i - 1} tentativas`)
+  if (wishlist[0].hasOwnProperty(category)) {
+    wishlist[0][category].push(userProducts);
   } else {
-    alert(`Parabéns, você acertou!! Restando ${i} tentativas`)
-    break;
+      alert('Categoria invalida')
   }
+  handleWishlist();
 }
-alert('Game over! Suas tentativas acabaram.')
+
+function formatarListaDeCompras(lista) {
+  let resultado = "";
+
+  for (const categoria in lista) {
+    if (lista[categoria].length > 0) {
+      resultado += `${categoria}: ${lista[categoria].join(', ')}\n`;
+    }
+  }
+
+  return resultado.trim();
+}
+
+alert(`Sua lista de compras ficou:\n\n${formatarListaDeCompras(wishlist[0])}`);
+
+
+
 
