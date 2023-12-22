@@ -109,19 +109,6 @@ function handleWishlist(){
   userDecision = prompt('Deseja adicionar algo na lista de compras?')
   return userDecision;
 }
-handleWishlist();
-
-while (userDecision == 'sim') {
-  let userProducts = prompt('Qual alimento deseja inserir na lista?')
-  let category = prompt('Em qual categoria se enquadra? Frutas/Laticinios/Carne/Vegetais')
-
-  if (wishlist[0].hasOwnProperty(category)) {
-    wishlist[0][category].push(userProducts);
-  } else {
-      alert('Categoria invalida')
-  }
-  handleWishlist();
-}
 
 function formatarListaDeCompras(lista) {
   let resultado = "";
@@ -135,7 +122,41 @@ function formatarListaDeCompras(lista) {
   return resultado.trim();
 }
 
-alert(`Sua lista de compras ficou:\n\n${formatarListaDeCompras(wishlist[0])}`);
+handleWishlist();
+
+while (userDecision == 'sim') {
+  let userProducts = prompt('Qual alimento deseja inserir na lista?')
+  let category = prompt('Em qual categoria se enquadra? Frutas/Laticinios/Carne/Vegetais')
+
+  if (wishlist[0].hasOwnProperty(category)) {
+    wishlist[0][category].push(userProducts);
+  } else {
+      alert('Categoria invalida')
+  }
+  
+  if(wishlist[0][category].includes(userProducts)){
+    let removeItem = prompt(`Sua lista de compras ficou:\n\n${formatarListaDeCompras(wishlist[0])}. Deseja remover algum item?`);
+    while (removeItem == 'sim') {
+      let category = prompt('Em qual categoria está o item que deseja remover? Frutas/Laticinios/Carne/Vegetais');
+      let itemRemoved = prompt(`Sua lista de compras ficou:\n\n${formatarListaDeCompras(wishlist[0])}. Qual item deseja remover?`)
+      let lowerCaseItemRemoved = itemRemoved.toLowerCase();
+
+      if (wishlist[0][category].includes(lowerCaseItemRemoved)) {
+        let index = wishlist[0][category].indexOf(lowerCaseItemRemoved);
+        wishlist[0][category].splice(index, 1);
+      } else {
+        alert('Não foi possível encontrar o item dentro da lista!');
+      }
+      removeItem = prompt(`Sua lista de compras ficou:\n\n${formatarListaDeCompras(wishlist[0])}. Deseja remover algum item?`);
+    }
+  }
+
+  handleWishlist();
+}
+
+
+
+
 
 
 
