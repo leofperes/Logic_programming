@@ -1,3 +1,5 @@
+let listaDeNumerosSorteados = [];
+let numeroLimite = 10;
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 
@@ -12,7 +14,18 @@ function initialMessage(){
 }
 
 function gerarNumeroAleatorio() {
-  return parseInt(Math.random() * 10 + 1);
+  let numeroEscolhido = parseInt(Math.random() * 10 + 1);
+  let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
+  if(quantidadeDeElementosNaLista == numeroLimite){
+    listaDeNumerosSorteados = [];
+  }
+
+  if(listaDeNumerosSorteados.includes(numeroEscolhido)){
+    return gerarNumeroAleatorio();
+  } else {
+    listaDeNumerosSorteados.push(numeroEscolhido)
+    return numeroEscolhido;
+  }
 }
 
 function cleanNumber() {
@@ -96,3 +109,25 @@ function verificarChute(){
 // }
 // let resultado = quadrado(4)
 // console.log(resultado);
+
+//-------Challenges arrays--------//
+
+//#1
+let listaGenerica = [];
+
+//#2
+let linguagensDeProgramação = ['Javascript', 'C', 'C++', 'Kotlin']
+
+//#3
+linguagensDeProgramação.push('Java')
+linguagensDeProgramação.push('Ruby')
+linguagensDeProgramação.push('GoLang')
+
+//#4
+console.log(linguagensDeProgramação[0])
+
+//#5
+console.log(linguagensDeProgramação[1])
+
+//#6
+console.log(linguagensDeProgramação[2])
