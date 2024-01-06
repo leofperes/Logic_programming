@@ -1,5 +1,8 @@
 # - <h2>SOBRE</h2>
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
+
+<h3>Reforçar a lógica de programação com Javascript</h3>
+
 O projeto atual está divido em pastas que correspondem aos cursos de lógica de programação utilizando Javascript na Web da Alura (com excessão da pasta "js-7-days-of-code").
 
 Repare que existe muitos códigos comentados, são todos desafios e exercícios disponibilizados pela Alura e que eu realizei de acordo com meus conhecimentos.
