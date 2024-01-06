@@ -23,6 +23,7 @@
 let usuario = 'lfp'
 let senha = '123'
 var gameClicado
+let contarAlugados = []
 
 
 function confirmarDevolucao(id){
@@ -45,10 +46,14 @@ function alterarStatus(){
     imagem.classList.remove('dashboard__item__img--rented')
     botao.classList.remove('dashboard__item__button--return')
     botao.textContent = 'Alugar'
-    
+    contarAlugados.pop(gameClicado);
+    console.log(contarAlugados.length)
   } else {
     imagem.classList.add('dashboard__item__img--rented')
     botao.classList.add('dashboard__item__button--return')
     botao.textContent = 'Devolver'
+    contarAlugados.push(gameClicado);
+    console.log(contarAlugados.length)
   }
 }
+
