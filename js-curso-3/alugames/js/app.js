@@ -20,8 +20,24 @@
 //     }
 // }
 
-function alterarStatus(id){
-  let gameClicado = document.getElementById(`game-${id}`);
+let usuario = 'lfp'
+let senha = '123'
+var gameClicado
+
+
+function confirmarDevolucao(id){
+  alert('Digite seu usuário e senha')
+  let validacaoUsuario = prompt('Usuário:')
+  let validacaoSenha = prompt('Senha:')
+  gameClicado = document.getElementById(`game-${id}`);
+  if(validacaoUsuario == usuario && validacaoSenha == senha){
+    alterarStatus()
+  } else {
+    alert('Usuário ou senha incorreta!')
+  }
+} 
+
+function alterarStatus(){
   let imagem = gameClicado.querySelector('.dashboard__item__img')
   let botao = gameClicado.querySelector('.dashboard__item__button')
 
@@ -29,6 +45,7 @@ function alterarStatus(id){
     imagem.classList.remove('dashboard__item__img--rented')
     botao.classList.remove('dashboard__item__button--return')
     botao.textContent = 'Alugar'
+    
   } else {
     imagem.classList.add('dashboard__item__img--rented')
     botao.classList.add('dashboard__item__button--return')
