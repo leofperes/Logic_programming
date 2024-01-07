@@ -56,4 +56,3 @@ function alterarStatus(){
     console.log(contarAlugados.length)
   }
 }
-
