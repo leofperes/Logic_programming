@@ -12,14 +12,11 @@ select.addEventListener('change', function(){
 
 function adicionar(){
   quantidadeSelecionada();
+  let nomeProduto = value.split('-')[0]
   let totalUnitario = somarValoresUnitariosProdutos();
-  wishlist = value;
-  var newSpan = document.createElement('span');
-  newSpan.setAttribute('class', 'texto-azul');
   let produtoTotal = totalUnitario * qtyProducts;
-  newSpan.textContent = `${qtyProducts}X ${wishlist} - Total: R$ ${produtoTotal.toFixed(2)}`;
-  sectionProducts.appendChild(newSpan);
-  spans.push(newSpan);
+  sectionProducts.innerHTML = sectionProducts.innerHTML + `<section class="carrinho__produtos__produto"><span class="texto-azul">${qtyProducts}X</span> ${nomeProduto} <span class="texto-azul">R$${produtoTotal}</span>
+  </section>`
   somarValoresProdutos(produtoTotal);
   return newSpan;
 }
