@@ -14,7 +14,6 @@ select.addEventListener('change', function(){
 function adicionar(){
   quantidadeSelecionada();
   validarQty = qtyProducts
-  console.log(validarQty)
   let textoProduto = select.options[select.selectedIndex].text;
   if(textoProduto !== "Selecione um produto" && validarQty > 0 ){
     let nomeProduto = value.split('-')[0]
