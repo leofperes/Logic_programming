@@ -1,28 +1,45 @@
-var ingressosDisponiveis;
+var ingressosDisponiveis
+var tipoDeingresso
 const mapeamentoIngressos = {
-  "inferior": "1",
-  "superior": "2",
-  "pista": "3"
+  pista: '1',
+  superior: '2',
+  inferior: '3'
 }
 
-// Capturar value do select para cada tipo ingresso
-function pegarValueTipoIngresso(){
-  return document.getElementById('tipo-ingresso').value;
+function pegarValueTipoIngresso() {
+  return document.getElementById('tipo-ingresso').value
 }
 
-// Capturar value do input para quantidade escolhida pelo usuario
-function pegarValueQuantidadeIngresso(){
-  return document.getElementById('qtd').value;
+function pegarValueQuantidadeIngresso() {
+  return document.getElementById('qtd').value
 }
 
-function pegarIngressosDisponiveis(){
-  let tipoDeingresso = pegarValueTipoIngresso();
+function pegarIngressosDisponiveis(e) {
+  tipoDeingresso = pegarValueTipoIngresso()
   let idCorrespondente = mapeamentoIngressos[tipoDeingresso]
-  return document.getElementById(`qtd-ingresso-${idCorrespondente}`);
+  if (e !== undefined) {
+    document.getElementById(`qtd-ingresso-${idCorrespondente}`).innerHTML = e
+  }
+  return parseInt(
+    document.getElementById(`qtd-ingresso-${idCorrespondente}`).textContent,
+    10
+  )
 }
 
-function comprar(){
-  let quantidadeIngresso = pegarValueQuantidadeIngresso();
-  ingressosDisponiveis = pegarIngressosDisponiveis();
-  console.log(ingressosDisponiveis);
+function atualizarQtdIngressosDisponiveis(disponivel, qtd) {
+  return disponivel - qtd
+}
+
+function comprar() {
+  let quantidadeIngresso = parseInt(pegarValueQuantidadeIngresso(), 10)
+  var ingressosDisponiveis = parseInt(pegarIngressosDisponiveis(), 10)
+  if (ingressosDisponiveis >= quantidadeIngresso) {
+    let totalIngressosDisponiveis = atualizarQtdIngressosDisponiveis(
+      ingressosDisponiveis,
+      quantidadeIngresso
+    )
+    pegarIngressosDisponiveis(totalIngressosDisponiveis)
+  } else {
+    alert('Ingressos esgotados')
+  }
 }
