@@ -53,13 +53,13 @@
 // calcular(operacao)
 
 //#3
-let numero = parseInt(evenOrOdd(prompt('Digite um número')))
+// let numero = parseInt(evenOrOdd(prompt('Digite um número')))
 
-function evenOrOdd(num) {
-  if (num % 2 === 0) {
-    alert('O número digitado é par')
-  } else {
-    alert('O número digitado é impar')
-  }
-}
+// function evenOrOdd(num) {
+//   if (num % 2 === 0) {
+//     alert('O número digitado é par')
+//   } else {
+//     alert('O número digitado é impar')
+//   }
+// }
 

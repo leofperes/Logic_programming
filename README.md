@@ -7,9 +7,21 @@ O projeto atual está divido em pastas que correspondem aos cursos de lógica de
 
 Repare que existe muitos códigos comentados, são todos desafios e exercícios disponibilizados pela Alura e que eu realizei de acordo com meus conhecimentos.
 
-Na pasta do primeiro curso vai ser possível encontrar conteúdos de declaração de variáveis, alert, prompt, laços de repetição condicionais.
-Enquanto na segunda pasta foi utilizado estrutura de dados como o Array, uso de funções para evitar repetição no código.
+<h4>Alugames<h4>
 
+Será encontrado conteúdos como: declaração de variáveis, alert, prompt, laços de repetição condicionais, funções nativas do js para adicionar e remover classes ou textos. Possui desafios resolvidos no arquivo <strong>challenges.js</strong>
+
+<h4>Carrinho-compras<h4>
+
+Foi utilizado estrutura de dados como o Array, uso de funções para evitar repetição no código, funções passando paramêtros, capturar valores de input ou clicks, função nativa js .split(). Possui desafios resolvidos no arquivo <strong>challenges.js</strong>
+
+<h4>Ingressos<h4>
+
+Foram usados objetos para servir de auxilio em um mapeamento de um array, funções passando paramêtros e função parseInt para transformar uma string de números em números inteiros. Possui desafios resolvidos no arquivo <strong>challenges.js</strong>
+
+<h4>Amigo Secreto<h4>
+
+Maior uso de arrays e os manipulando, utilizando push e pop para adicionar ou remover elementos respectivamente, método fisher-yates para embaralhar o array, e nova função nativa filter para remover duplicatas de um array.
 ----
 <h2>Comandos GIT</h2>
 
