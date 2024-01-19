@@ -7,21 +7,22 @@ O projeto atual está divido em pastas que correspondem aos cursos de lógica de
 
 Repare que existe muitos códigos comentados, são todos desafios e exercícios disponibilizados pela Alura e que eu realizei de acordo com meus conhecimentos.
 
-<h4>Alugames<h4>
+<h4>Alugames</h4>
 
 Será encontrado conteúdos como: declaração de variáveis, alert, prompt, laços de repetição condicionais, funções nativas do js para adicionar e remover classes ou textos. Possui desafios resolvidos no arquivo <strong>challenges.js</strong>
 
-<h4>Carrinho-compras<h4>
+<h4>Carrinho-compras</h4>
 
 Foi utilizado estrutura de dados como o Array, uso de funções para evitar repetição no código, funções passando paramêtros, capturar valores de input ou clicks, função nativa js .split(). Possui desafios resolvidos no arquivo <strong>challenges.js</strong>
 
-<h4>Ingressos<h4>
+<h4>Ingressos</h4>
 
 Foram usados objetos para servir de auxilio em um mapeamento de um array, funções passando paramêtros e função parseInt para transformar uma string de números em números inteiros. Possui desafios resolvidos no arquivo <strong>challenges.js</strong>
 
-<h4>Amigo Secreto<h4>
+<h4>Amigo Secreto</h4>
 
 Maior uso de arrays e os manipulando, utilizando push e pop para adicionar ou remover elementos respectivamente, método fisher-yates para embaralhar o array, e nova função nativa filter para remover duplicatas de um array.
+
 ----
 <h2>Comandos GIT</h2>
 
@@ -46,3 +47,9 @@ git reset --hard ID do commit // Apaga o commit desejado, porém tem que selecio
 git commit --amend -m "troca mensagem" // Troca a mensagem do commit
 
 ----
+
+<h2>Método Fisher-Yates</h2>
+
+O algoritmo de Fisher-Yates, também conhecido como o algoritmo de embaralhamento de Knuth ou o algoritmo de shuffle de Durstenfeld, é um algoritmo para gerar uma permutação aleatória de um conjunto finito. Ele foi projetado para embaralhar um array ou lista de forma eficiente e uniformemente aleatória.
+
+O algoritmo opera trocando elementos dentro do array. A ideia básica é percorrer o array da direita para a esquerda e, para cada elemento, trocá-lo aleatoriamente com um elemento anterior a ele (incluindo ele mesmo). Esse processo é repetido até que todo o array esteja embaralhado.
